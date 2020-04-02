@@ -4,23 +4,46 @@ import StartScreen from "../views/StartScreen";
 import Account from "../views/Account";
 import Login from "../views/Login";
 import VerifyOtp from "../views/VerifyOtp";
-import Lists from "../views/Lists";
+import Layout from "../views/Layout";
+import ListLayout from "../views/ListLayout";
+import Sort from "../views/Sort";
 
 const screens = {
   StartScreen: {
     screen: StartScreen,
+    navigationOptions: {
+      headerShown: false,
+    },
   },
   Account: {
     screen: Account,
+    navigationOptions: {
+      headerShown: false,
+    },
   },
   Login: {
     screen: Login,
+    navigationOptions: {
+      headerShown: false,
+    },
   },
   VerifyOtp: {
     screen: VerifyOtp,
+    navigationOptions: {
+      headerShown: false,
+    },
   },
-  Lists: {
-    screen: Lists,
+  ListLayout: {
+    screen: ListLayout,
+    navigationOptions: {
+      headerShown: false,
+    },
+  },
+  Sort: {
+    screen: Sort,
+    navigationOptions: {
+      headerShown: false,
+    },
   },
 };
 

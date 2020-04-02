@@ -25,6 +25,7 @@ export default function FirstScreen({ navigation }) {
           <TextInput
             placeholder='Enter Ph. Number'
             defaultValue={Text}
+            keyboardType='number-pad'
             style={styles.textInput}
           />
         </View>
@@ -77,17 +78,19 @@ const styles = StyleSheet.create({
     paddingBottom: 40,
   },
   input: {
-    flexDirection: "column",
+    flexDirection: "row",
+    justifyContent: "center",
   },
   bodyText: {
     padding: 20,
-    flex: 2,
+    fontSize: 20,
+    flex: 1,
   },
   textInput: {
-    flex: 8,
+    flex: 6,
     borderBottomWidth: 1,
-    borderColor: "black",
-    fontSize: 15,
+    borderColor: "grey",
+    fontSize: 20,
   },
   footer: {
     flex: 0.5,

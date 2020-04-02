@@ -1,59 +1,70 @@
 import React from "react";
 import { View, Text, StyleSheet, Image, TouchableOpacity } from "react-native";
 
-export default function Card() {
+export default function Card(prorps) {
   return (
-    <TouchableOpacity>
-      <View style={styles.body}>
+    <TouchableOpacity style={{ paddingBottom: 5 }}>
+      <View style={styles.card}>
         <View style={styles.heading}>
-          <Text style={styles.bodyText}>Hospital</Text>
-          <Text style={styles.status}>Open Now </Text>
+          <Text style={styles.headingText}>{prorps.name}</Text>
+          <Text style={styles.status}>{prorps.status}</Text>
         </View>
-        <Text style={styles.address}>ABC, DEF City</Text>
+        <Text style={styles.address}>{prorps.address}</Text>
 
         <View style={{ flexDirection: "row" }}>
-          <View style={{ flex: 1, paddingLeft: 5 }}>
+          <View style={{ justifyContent: "space-between" }}>
             <Image
               style={styles.logo}
               source={require("../images/icons/hospital.png")}
             />
           </View>
-          <View style={{ flex: 6, paddingLeft: 10, paddingTop: 10 }}>
-            <View style={{ flexDirection: "row" }}>
+          <View style={styles.details}>
+            <View
+              style={{
+                flexDirection: "row",
+                justifyContent: "space-between",
+              }}
+            >
               <Text style={styles.serving}>Serving Hours:</Text>
               <Text style={styles.availableSlots}>Next Available Slots:</Text>
             </View>
-            <View style={{ flexDirection: "row" }}>
-              <Text style={{ flex: 4, fontSize: 10, paddingLeft: 10 }}>
+            <View
+              style={{
+                flexDirection: "row",
+                justifyContent: "space-between",
+              }}
+            >
+              <Text style={{ fontSize: 10, paddingLeft: 10 }}>
                 07:00AM - 09:00PM
               </Text>
-              <Text style={{ flex: 2, fontSize: 10, paddingLeft: 10 }}>
-                01:40PM, Today
+              <Text style={{ fontSize: 10, paddingRight: 10 }}>
+                {prorps.availableSlots}
               </Text>
             </View>
             <Text style={{ paddingLeft: 10, fontWeight: "bold", fontSize: 10 }}>
               Speciality
             </Text>
-            <View style={{ flexDirection: "row" }}>
+            <View
+              style={{
+                flexDirection: "row",
+                justifyContent: "space-between",
+              }}
+            >
               <Text
                 style={{
-                  flex: 6,
                   fontSize: 10,
                   paddingLeft: 10,
-                  paddingBottom: 5,
                 }}
               >
                 GENREAL SURGERY, CARDIOLOGY
               </Text>
               <Text
                 style={{
-                  flex: 1,
                   fontSize: 10,
-                  paddingLeft: 10,
-                  paddingBottom: 5,
+                  paddingRight: 10,
                 }}
               >
-                2.3KM
+                {prorps.distance}
               </Text>
             </View>
           </View>
@@ -64,50 +75,48 @@ export default function Card() {
 }
 
 const styles = StyleSheet.create({
-  body: {
+  card: {
     backgroundColor: "#fff",
-    borderWidth: 1,
   },
   heading: {
     flexDirection: "row",
     backgroundColor: "#fff",
-    padding: 2,
-    marginTop: 2,
+    justifyContent: "space-between",
   },
-  bodyText: {
+  headingText: {
     fontWeight: "bold",
-    fontSize: 17,
+    fontSize: 18,
     paddingTop: 5,
-    paddingLeft: 10,
-    flex: 3,
+    paddingLeft: 5,
   },
   status: {
     fontWeight: "bold",
     fontSize: 15,
-    paddingTop: 5,
-    paddingLeft: 5,
-    flex: 1,
+    paddingTop: 10,
+    paddingRight: 25,
     color: "#6ad380",
   },
   address: {
     fontSize: 10,
     paddingLeft: 10,
-    paddingBottom: 5,
   },
   logo: {
     width: 70,
     height: 70,
   },
+  details: {
+    flex: 6,
+    paddingLeft: 10,
+    paddingTop: 10,
+  },
   serving: {
     fontWeight: "bold",
-    flex: 4,
     paddingLeft: 10,
     fontSize: 10,
   },
   availableSlots: {
     fontWeight: "bold",
-    flex: 3,
-    paddingLeft: 10,
+    paddingRight: 10,
     fontSize: 10,
   },
 });

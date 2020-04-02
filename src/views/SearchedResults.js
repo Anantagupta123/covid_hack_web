@@ -6,7 +6,6 @@ import {
   Button,
   TextInput,
   ScrollView,
-  TouchableOpacity,
 } from "react-native";
 import Card from "../assets/components/Card";
 import FooterMenu from "../assets/components/FooterMenu";
@@ -37,8 +36,20 @@ export default function Lists() {
           </View>
         </View>
         <ScrollView style={{ paddingBottom: 20 }}>
-          <Card />
-          <Card />
+          <Card
+            name='New Jersey Hospital'
+            address='123, ABC Area '
+            status='Open Now'
+            availableSlots='01:40PM ,Today'
+            distance='0.3 km'
+          />
+          <Card
+            name='Boston Govt Hospital'
+            address='456, DEF Area'
+            status='Closed'
+            availableSlots='8.00AM ,Tomorrow'
+            distance='4.5 km'
+          />
         </ScrollView>
       </View>
       <View>

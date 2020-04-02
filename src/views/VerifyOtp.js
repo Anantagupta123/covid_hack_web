@@ -3,7 +3,7 @@ import { StyleSheet, Text, View, Button, TextInput, Image } from "react-native";
 
 export default function FirstScreen({ navigation }) {
   const pressHandler = () => {
-    navigation.navigate("Lists");
+    navigation.navigate("ListLayout");
   };
 
   return (
@@ -25,20 +25,9 @@ export default function FirstScreen({ navigation }) {
         </View>
         <View style={styles.input}>
           <TextInput placeholder='Enter Here' style={styles.textInput} />
-          {/* <TextInput
-            placeholder='Enter Ph. Number'
-            defaultValue={Text}
-            style={styles.textInput}
-          /> */}
-          <Text style={{ paddingTop: 20 }}>
-            Didn't received the OTP?{"  "}
-            <Text
-              style={{
-                fontWeight: "bold",
-              }}
-            >
-              Resend OTP
-            </Text>
+          <Text style={{ paddingTop: 50 }}>
+            Didn't received the OTP?
+            <Text style={{ fontWeight: "bold" }}>Resend OTP</Text>
           </Text>
         </View>
         <Button title='Submit OTP' color='#6ad380' onPress={pressHandler} />
@@ -81,10 +70,9 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
     fontSize: 20,
     paddingBottom: 10,
-    // fontFamily: "NuntioSans-Bold",
   },
   input: {
-    flexDirection: "column",
+    paddingBottom: 10,
   },
   bodyText: {
     paddingTop: 20,

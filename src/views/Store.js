@@ -8,7 +8,8 @@ import {
   TouchableOpacity,
 } from "react-native";
 import { Icon } from "react-native-elements";
-import Card from "../assets/components/Card";
+import StoreCard from "../assets/components/StoreCard";
+import ConfirmCard from "../assets/components/ConfirmCard";
 import FooterMenu from "../assets/components/FooterMenu";
 
 export default function Lists() {
@@ -33,25 +34,9 @@ export default function Lists() {
       </TouchableOpacity>
 
       <View style={styles.lists}>
-        <View style={{ padding: 5, flexDirection: "column" }}>
-          <View style={{ flexDirection: "row" }}>
-            <View style={{ flex: 4 }}>
-              <Text style={{ fontSize: 20, fontWeight: "bold" }}>
-                Nearby, Hospitals
-              </Text>
-            </View>
-            <View style={{ flex: 2 }}>
-              <Button title='Sort & Filter' color='#6ad380' />
-            </View>
-          </View>
-        </View>
         <ScrollView style={{ paddingBottom: 20 }}>
-          <Card />
-          <Card />
-          <Card />
-          <Card />
-          <Card />
-          <Card />
+          <StoreCard />
+          {/* <ConfirmCard /> */}
         </ScrollView>
       </View>
       <View>
@@ -65,7 +50,7 @@ const styles = StyleSheet.create({
   lists: {
     flex: 1,
     backgroundColor: "#dcdcdc",
-    padding: 5,
+    padding: 8,
     justifyContent: "space-between",
   },
 });

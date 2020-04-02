@@ -19,16 +19,21 @@ export default function FirstScreen({ navigation }) {
       </View>
       <View style={styles.body}>
         <Text style={styles.bodyHeading}>ACCOUNT</Text>
-        <Text>
-          Login/Create an account to know about grocery, medical, milk, meat
-          shops around you.
-        </Text>
         <Text style={{ paddingBottom: 30 }}>
-          Know about nearby COVID-19 testing centers, hospitals and Govt.
-          shelters
+          Login/Create an account to know about grocery, medical, milk, meat
+          shops around you. {"\n"}Know about nearby COVID-19 testing centers,
+          hospitals and Govt. shelters
         </Text>
-        <Button title='Login' color='#6ad380' onPress={pressHandler} />
-        <Button title='Create Account' color='#6ad380' onPress={pressHandler} />
+        <View style={styles.button}>
+          <Button title='Login' color='#6ad380' onPress={pressHandler} />
+        </View>
+        <View style={styles.button}>
+          <Button
+            title='Create Account'
+            color='#6ad380'
+            onPress={pressHandler}
+          />
+        </View>
       </View>
       <View style={styles.footer}>
         <Text style={styles.footerText}>
@@ -66,12 +71,15 @@ const styles = StyleSheet.create({
   },
   body: {
     flex: 4,
-    padding: 45,
+    padding: 40,
   },
   bodyHeading: {
     fontWeight: "bold",
     fontSize: 20,
     paddingBottom: 40,
+  },
+  button: {
+    padding: 5,
   },
   footer: {
     flex: 0.5,

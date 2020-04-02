@@ -37,7 +37,7 @@ const styles = StyleSheet.create({
   footer: {
     elevation: 5,
     backgroundColor: "#fff",
-    padding: 5,
+    padding: 15,
   },
   footerText: {
     fontSize: 10,
