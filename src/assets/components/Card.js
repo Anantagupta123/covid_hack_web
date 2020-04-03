@@ -35,7 +35,7 @@ export default function Card(prorps) {
               }}
             >
               <Text style={{ fontSize: 10, paddingLeft: 10 }}>
-                07:00AM - 09:00PM
+                {prorps.openingTime} - {prorps.closingTime}
               </Text>
               <Text style={{ fontSize: 10, paddingRight: 10 }}>
                 {prorps.availableSlots}
@@ -56,7 +56,7 @@ export default function Card(prorps) {
                   paddingLeft: 10,
                 }}
               >
-                GENREAL SURGERY, CARDIOLOGY
+                {prorps.speciality}
               </Text>
               <Text
                 style={{

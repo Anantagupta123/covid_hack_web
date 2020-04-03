@@ -129,7 +129,6 @@ export default function StoreCard() {
 const styles = StyleSheet.create({
   body: {
     backgroundColor: "#fff",
-    borderWidth: 1,
   },
   logo: {
     width: 80,

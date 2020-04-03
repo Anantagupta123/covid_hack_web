@@ -4,7 +4,7 @@ import { CheckBox } from "react-native-elements";
 
 export default function Sort({ navigation }) {
   const pressHandler = () => {
-    navigation.navigate("Lists");
+    navigation.navigate("ListLayout");
   };
   return (
     <View style={styles.container}>

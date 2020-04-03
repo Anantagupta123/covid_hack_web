@@ -1,0 +1,20 @@
+{
+  "hospital": [
+    {
+      "id": 1,
+      "name": "New Jersey Hospital",
+      "address": "123, ABC Area",
+      "status": "Open Now",
+      "availableSlots": "01:40PM, Today",
+      "distance": "0.3 km"
+    },
+    {
+      "id": 2,
+      "name": "Boston Govt Hospital",
+      "address": "456, ICE Area",
+      "status": "Closed",
+      "availableSlots": "08:00AM, Tomorrow",
+      "distance": "2.3 km"
+    }
+  ]
+}

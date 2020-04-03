@@ -26,7 +26,7 @@ export default function FirstScreen({ navigation }) {
         <View style={styles.input}>
           <TextInput placeholder='Enter Here' style={styles.textInput} />
           <Text style={{ paddingTop: 50 }}>
-            Didn't received the OTP?
+            Didn't received the OTP?{"\t"}
             <Text style={{ fontWeight: "bold" }}>Resend OTP</Text>
           </Text>
         </View>

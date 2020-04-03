@@ -1,12 +1,40 @@
-import React from "react";
-import { View, Text, StyleSheet, Button, ScrollView } from "react-native";
+import React, { useState } from "react";
+import { View, Text, StyleSheet, Button, FlatList } from "react-native";
 import Header from "../assets/components/Header";
 import FooterMenu from "../assets/components/FooterMenu";
-
 //Components
 import Card from "../assets/components/Card";
 
-export default function ListLayout() {
+export default function ListLayout({ navigation }) {
+  const [hospital, setHospital] = useState([
+    {
+      id: 1,
+      name: "New Jersey Hospital",
+      address: "123, ABC Area",
+      status: "Open Now",
+      availableSlots: "01:40PM, Today",
+      distance: "0.3 km",
+      openingTime: "07:00AM",
+      closingTime: "09:00PM",
+      speciality: "GENREAL SURGERY, CARDIOLOGY",
+    },
+    {
+      id: 2,
+      name: "Boston Govt Hospital",
+      address: "456, ICE Area",
+      status: "Closed",
+      availableSlots: "08:00AM, Tomorrow",
+      distance: "2.3 km",
+      openingTime: "08:00AM",
+      closingTime: "11:00PM",
+      speciality: "ORTHOPEDICS, GENERAL MEDICINE",
+    },
+  ]);
+
+  const pressHandler = () => {
+    navigation.navigate("Sort");
+  };
+
   return (
     <View style={styles.conatiner}>
       {/* Header Component */}
@@ -32,27 +60,30 @@ export default function ListLayout() {
             >
               Nearby, Hospitals
             </Text>
-            <Button title='Sort & Filter' color='#6ad380' />
+            <Button
+              title='Sort & Filter'
+              color='#6ad380'
+              onPress={pressHandler}
+            />
           </View>
-          <ScrollView style={{ paddingBottom: 20 }}>
-            {/* Hospital Cards */}
-            <View>
+
+          {/* Hospital Card  */}
+          <FlatList
+            keyExtractor={item => item.id.toString()}
+            data={hospital}
+            renderItem={({ item }) => (
               <Card
-                name='New Jersey Hospital'
-                address='123, ABC Area '
-                status='Open Now'
-                availableSlots='01:40PM ,Today'
-                distance='0.3 km'
+                name={item.name}
+                address={item.address}
+                status={item.status}
+                availableSlots={item.availableSlots}
+                distance={item.distance}
+                openingTime={item.openingTime}
+                closingTime={item.closingTime}
+                speciality={item.speciality}
               />
-              <Card
-                name='Boston Govt Hospital'
-                address='456, DEF Area'
-                status='Closed'
-                availableSlots='8.00AM ,Tomorrow'
-                distance='4.5 km'
-              />
-            </View>
-          </ScrollView>
+            )}
+          />
         </View>
       </View>
 

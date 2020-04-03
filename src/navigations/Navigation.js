@@ -4,9 +4,10 @@ import StartScreen from "../views/StartScreen";
 import Account from "../views/Account";
 import Login from "../views/Login";
 import VerifyOtp from "../views/VerifyOtp";
-import Layout from "../views/Layout";
 import ListLayout from "../views/ListLayout";
 import Sort from "../views/Sort";
+import Search from "../views/Search";
+import Location from "../views/Location";
 
 const screens = {
   StartScreen: {
@@ -44,6 +45,15 @@ const screens = {
     navigationOptions: {
       headerShown: false,
     },
+  },
+  Search: {
+    screen: Search,
+    navigationOptions: {
+      headerShown: false,
+    },
+  },
+  Location: {
+    screen: Location,
   },
 };
 

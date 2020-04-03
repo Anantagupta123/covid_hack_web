@@ -1,16 +1,16 @@
 import React from "react";
-import { View, Text, StyleSheet, Image, TouchableOpacity } from "react-native";
+import { View, Text, StyleSheet } from "react-native";
 import { Icon } from "react-native-elements";
 
-export default function Card() {
+export default function Card(props) {
   return (
     <View>
       <View style={styles.profile}>
         <View style={styles.user}>
-          <Text style={styles.userName}>Ryan Grey</Text>
+          <Text style={styles.userName}>{props.name}</Text>
           <View style={{ flexDirection: "row" }}>
             <Text style={styles.phone}>Mobile: </Text>
-            <Text>+91 80000 80000</Text>
+            <Text>+91 {props.mobile}</Text>
           </View>
         </View>
       </View>
@@ -36,8 +36,8 @@ export default function Card() {
           <Icon name='edit' type='feather' color='#6ad380' />
         </View>
         <View style={{ paddingLeft: 35, paddingBottom: 5 }}>
-          <Text>102, A Block, High View Residential</Text>
-          <Text>Vasan Area, Old Town, States.</Text>
+          <Text>{props.addressLine1}</Text>
+          <Text>{props.addressLine2}</Text>
         </View>
       </View>
 
@@ -48,7 +48,12 @@ export default function Card() {
           <Text style={styles.bodyText}>Send Feedback</Text>
         </View>
 
-        <View style={{ flexDirection: "row", paddingLeft: 10 }}>
+        <View
+          style={{
+            flexDirection: "row",
+            paddingLeft: 10,
+          }}
+        >
           <View style={{ flex: 0.2 }}>
             <Icon name='mail' type='antdesign' color='#6ad380' />
           </View>
