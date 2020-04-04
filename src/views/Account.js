@@ -19,7 +19,7 @@ export default function FirstScreen({ navigation }) {
       </View>
       <View style={styles.body}>
         <Text style={styles.bodyHeading}>ACCOUNT</Text>
-        <Text style={{ paddingBottom: 30 }}>
+        <Text style={{ paddingBottom: 30, fontFamily: "nunito-regular" }}>
           Login/Create an account to know about grocery, medical, milk, meat
           shops around you. {"\n"}Know about nearby COVID-19 testing centers,
           hospitals and Govt. shelters
@@ -77,7 +77,7 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
     fontSize: 20,
     paddingBottom: 40,
-    // fontFamily: "NunitoSans-Regular",
+    fontFamily: "nunito-bold",
   },
   button: {
     padding: 5,
@@ -89,5 +89,6 @@ const styles = StyleSheet.create({
   },
   footerText: {
     fontSize: 15,
+    fontFamily: "nunito-regular",
   },
 });

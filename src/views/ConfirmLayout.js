@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { View, Text, StyleSheet, ScrollView } from "react-native";
+import { View, StyleSheet, ScrollView, Button } from "react-native";
 import Header from "../assets/components/Header";
 import FooterMenu from "../assets/components/FooterMenu";
 
@@ -18,6 +18,7 @@ export default function Layout() {
           {/* <StoreCard /> */}
           <ConfirmCard />
         </ScrollView>
+        <Button title='Return to Menu' color='#6ad380' />
       </View>
 
       {/* Footer Component */}
@@ -29,12 +30,11 @@ export default function Layout() {
 const styles = StyleSheet.create({
   conatiner: {
     flex: 1,
-    justifyContent: "space-between",
+    justifyContent: "space-evenly",
     backgroundColor: "#dcdcdc",
   },
   body: {
-    // flex: 1,
+    flex: 1,
     padding: 5,
-    justifyContent: "center",
   },
 });

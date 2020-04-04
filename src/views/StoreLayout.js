@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { View, Text, StyleSheet, ScrollView } from "react-native";
+import { View, StyleSheet, ScrollView, Button } from "react-native";
 import Header from "../assets/components/Header";
 import FooterMenu from "../assets/components/FooterMenu";
 
@@ -18,6 +18,9 @@ export default function Layout() {
           <StoreCard />
           {/* <ConfirmCard /> */}
         </ScrollView>
+        <View>
+          <Button title='Book Appointmnet' color='#6ad380' />
+        </View>
       </View>
 
       {/* Footer Component */}

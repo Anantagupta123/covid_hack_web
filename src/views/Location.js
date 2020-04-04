@@ -22,7 +22,7 @@ export default class Location extends Component {
             <View style={{ padding: 10 }}>
               <TextInput
                 placeholder='Search for a locality, landmark'
-                style={{ borderBottomWidth: 1 }}
+                style={{ borderBottomWidth: 1, fontFamily: "nunito-regular" }}
               />
             </View>
           </View>
@@ -32,7 +32,7 @@ export default class Location extends Component {
               <Icon name='gps-fixed' type='MaterialIcons' color='#dcdcdc' />
             </View>
             <View style={{ padding: 10 }}>
-              <Text>Use Current GPS Location</Text>
+              <Text style={styles.locationText}>USE CURRENT GPS LOCATION</Text>
             </View>
           </TouchableOpacity>
 
@@ -41,7 +41,7 @@ export default class Location extends Component {
               <Icon name='plus' type='entypo' color='#dcdcdc' />
             </View>
             <View style={{ padding: 10 }}>
-              <Text>ADD NEW ADDRESS</Text>
+              <Text style={styles.locationText}>ADD NEW ADDRESS</Text>
             </View>
           </TouchableOpacity>
 
@@ -50,7 +50,7 @@ export default class Location extends Component {
               <Icon name='bookmark' type='FontAwesome' color='#dcdcdc' />
             </View>
             <View style={{ padding: 10 }}>
-              <Text>SAVED ADDRESS</Text>
+              <Text style={styles.locationText}>SAVED ADDRESS</Text>
             </View>
           </TouchableOpacity>
 
@@ -59,7 +59,7 @@ export default class Location extends Component {
               <Icon name='location-on' type='MaterialIcons' color='#dcdcdc' />
             </View>
             <View style={{ padding: 10 }}>
-              <Text>Home</Text>
+              <Text style={styles.locationText}>HOME</Text>
             </View>
           </TouchableOpacity>
         </ScrollView>
@@ -75,5 +75,8 @@ const styles = StyleSheet.create({
   locationDetails: {
     padding: 10,
     flexDirection: "row",
+  },
+  locationText: {
+    fontFamily: "nunito-regular",
   },
 });

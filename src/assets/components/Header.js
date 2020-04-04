@@ -14,7 +14,7 @@ export default function Header() {
             <Text
               style={{
                 fontSize: 20,
-                fontWeight: "bold",
+                fontFamily: "nunito-bold",
               }}
             >
               Location - Home

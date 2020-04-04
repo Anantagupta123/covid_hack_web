@@ -16,12 +16,12 @@ export default function Card(props) {
             justifyContent: "space-between",
           }}
         >
-          <Text style={{ fontSize: 15 }}>
-            <Text style={{ fontWeight: "bold" }}>Date: </Text>
+          <Text style={{ fontSize: 15, fontFamily: "nunito-regular" }}>
+            <Text style={{ fontFamily: "nunito-bold" }}>Date: </Text>
             {props.date}
           </Text>
-          <Text style={{ fontSize: 15 }}>
-            <Text style={{ fontWeight: "bold" }}>Time: </Text>
+          <Text style={{ fontSize: 15, fontFamily: "nunito-regular" }}>
+            <Text style={{ fontFamily: "nunito-bold" }}>Time: </Text>
             {props.time}
           </Text>
           <TouchableOpacity style={{ paddingRight: 10 }}>
@@ -30,10 +30,21 @@ export default function Card(props) {
         </View>
 
         <View
-          style={{ flexDirection: "row", paddingLeft: 10, paddingBottom: 10 }}
+          style={{
+            flexDirection: "row",
+            paddingLeft: 10,
+            paddingBottom: 10,
+          }}
         >
-          <Text style={{ fontSize: 15, fontWeight: "bold", paddingTop: 5 }}>
-            Status:{" "}
+          <Text
+            style={{
+              fontSize: 15,
+              fontFamily: "nunito-bold",
+              paddingTop: 5,
+              paddingRight: 5,
+            }}
+          >
+            Status:
           </Text>
           <Text
             style={{
@@ -42,6 +53,7 @@ export default function Card(props) {
               padding: 2,
               borderWidth: 1,
               borderColor: "#6ad380",
+              fontFamily: "nunito-regular",
             }}
           >
             {props.bookingStatus}
@@ -57,7 +69,7 @@ const styles = StyleSheet.create({
     backgroundColor: "#fff",
   },
   headingText: {
-    fontWeight: "bold",
+    fontFamily: "nunito-bold",
     fontSize: 18,
     paddingTop: 5,
     paddingLeft: 10,
@@ -67,6 +79,7 @@ const styles = StyleSheet.create({
     fontSize: 10,
     paddingLeft: 10,
     paddingBottom: 5,
+    fontFamily: "nunito-regular",
   },
   logo: {
     width: 70,

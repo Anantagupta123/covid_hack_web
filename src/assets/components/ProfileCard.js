@@ -10,7 +10,9 @@ export default function Card(props) {
           <Text style={styles.userName}>{props.name}</Text>
           <View style={{ flexDirection: "row" }}>
             <Text style={styles.phone}>Mobile: </Text>
-            <Text>+91 {props.mobile}</Text>
+            <Text style={{ fontFamily: "nunito-regular" }}>
+              +91 {props.mobile}
+            </Text>
           </View>
         </View>
       </View>
@@ -58,7 +60,7 @@ export default function Card(props) {
             <Icon name='mail' type='antdesign' color='#6ad380' />
           </View>
           <View style={{ flex: 2 }}>
-            <Text style={{ paddingBottom: 10 }}>
+            <Text style={{ paddingBottom: 10, fontFamily: "nunito-regular" }}>
               Email us at info@coroneed.com
             </Text>
           </View>
@@ -74,10 +76,10 @@ const styles = StyleSheet.create({
   },
   userName: {
     fontSize: 20,
-    fontWeight: "bold",
+    fontFamily: "nunito-bold",
   },
   phone: {
-    fontWeight: "bold",
+    fontFamily: "nunito-bold",
   },
   profile: {
     backgroundColor: "#fff",
@@ -89,7 +91,7 @@ const styles = StyleSheet.create({
     marginTop: 2,
   },
   bodyText: {
-    fontWeight: "bold",
+    fontFamily: "nunito-bold",
     fontSize: 18,
     flex: 3,
   },
@@ -97,7 +99,7 @@ const styles = StyleSheet.create({
     fontSize: 12,
     paddingLeft: 10,
     paddingBottom: 5,
-    fontWeight: "bold",
+    fontFamily: "nunito-bold",
   },
   logo: {
     width: 70,

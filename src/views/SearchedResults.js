@@ -16,8 +16,12 @@ export default function Lists() {
       <View style={{ flexDirection: "row" }}>
         <View style={{ flex: 1, padding: 10 }}>
           <TextInput
-            placeholder='Hospitals'
-            style={{ fontSize: 15, borderBottomWidth: 1 }}
+            placeholder='Results'
+            style={{
+              fontSize: 15,
+              borderBottomWidth: 1,
+              fontFamily: "nunito-regular",
+            }}
           />
         </View>
         <View>
@@ -29,7 +33,7 @@ export default function Lists() {
         <View style={{ padding: 5, flexDirection: "column" }}>
           <View style={{ flexDirection: "row" }}>
             <View style={{ flex: 4 }}>
-              <Text style={{ fontSize: 18, fontWeight: "bold" }}>
+              <Text style={{ fontSize: 18, fontFamily: "nunito-bold" }}>
                 Searched Results
               </Text>
             </View>

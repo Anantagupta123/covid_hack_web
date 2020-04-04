@@ -14,7 +14,15 @@ export default function FooterMenu() {
       >
         <TouchableOpacity style={{ flex: 1, alignItems: "center" }}>
           <Icon name='compass' type='entypo' color='#6ad380' />
-          <Text style={{ fontSize: 10, color: "#6ad380" }}>EXPLORE</Text>
+          <Text
+            style={{
+              fontSize: 10,
+              color: "#6ad380",
+              fontFamily: "nunito-regular",
+            }}
+          >
+            EXPLORE
+          </Text>
         </TouchableOpacity>
         <TouchableOpacity style={{ flex: 1, alignItems: "center" }}>
           <Icon name='search' type='evilicons' color='#dcdcdc' />
@@ -42,5 +50,6 @@ const styles = StyleSheet.create({
   footerText: {
     fontSize: 10,
     color: "#dcdcdc",
+    fontFamily: "nunito-regular",
   },
 });

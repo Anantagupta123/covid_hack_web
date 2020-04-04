@@ -56,6 +56,7 @@ export default function ListLayout({ navigation }) {
                 fontSize: 20,
                 fontWeight: "bold",
                 paddingTop: 5,
+                fontFamily: "nunito-bold",
               }}
             >
               Nearby, Hospitals

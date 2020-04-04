@@ -20,7 +20,7 @@ export default function HistoryLayout() {
           <View
             style={{ flexDirection: "row", justifyContent: "space-between" }}
           >
-            <Text style={{ fontSize: 20, fontWeight: "bold" }}>
+            <Text style={{ fontSize: 20, fontFamily: "nunito-bold" }}>
               Booking History
             </Text>
           </View>

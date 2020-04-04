@@ -8,35 +8,35 @@ export default function Sort({ navigation }) {
   };
   return (
     <View style={styles.container}>
-      <Text style={{ fontSize: 15, fontWeight: "bold" }}>Filter by:</Text>
+      <Text style={styles.heading}>Filter by:</Text>
       <View style={{ flexDirection: "row", alignItems: "center" }}>
         <CheckBox />
-        <Text>Hospitals</Text>
-      </View>
-      <View style={{ flexDirection: "row", alignItems: "center" }}>
-        <CheckBox />
-        <Text>Test Centers</Text>
+        <Text style={styles.filterText}>Hospitals</Text>
       </View>
       <View style={{ flexDirection: "row", alignItems: "center" }}>
         <CheckBox />
-        <Text>Shelter Homes</Text>
-      </View>
-      <Text>Sort by:</Text>
-      <View style={{ flexDirection: "row", alignItems: "center" }}>
-        <CheckBox uncheckedIcon='circle-o' />
-        <Text>Nearest</Text>
+        <Text style={styles.filterText}>Test Centers</Text>
       </View>
       <View style={{ flexDirection: "row", alignItems: "center" }}>
-        <CheckBox uncheckedIcon='circle-o' />
-        <Text>Next Available Slot</Text>
+        <CheckBox />
+        <Text style={styles.filterText}>Shelter Homes</Text>
       </View>
+      <Text style={styles.heading}>Sort by:</Text>
       <View style={{ flexDirection: "row", alignItems: "center" }}>
         <CheckBox uncheckedIcon='circle-o' />
-        <Text>Farthest</Text>
+        <Text style={styles.filterText}>Nearest</Text>
       </View>
       <View style={{ flexDirection: "row", alignItems: "center" }}>
         <CheckBox uncheckedIcon='circle-o' />
-        <Text>Crowd</Text>
+        <Text style={styles.filterText}>Next Available Slot</Text>
+      </View>
+      <View style={{ flexDirection: "row", alignItems: "center" }}>
+        <CheckBox uncheckedIcon='circle-o' />
+        <Text style={styles.filterText}>Farthest</Text>
+      </View>
+      <View style={{ flexDirection: "row", alignItems: "center" }}>
+        <CheckBox uncheckedIcon='circle-o' />
+        <Text style={styles.filterText}>Crowd</Text>
       </View>
       <View
         style={{
@@ -61,7 +61,14 @@ const styles = StyleSheet.create({
     backgroundColor: "#fff",
     padding: 10,
   },
+  heading: {
+    fontSize: 17,
+    fontFamily: "nunito-bold",
+  },
   button: {
     padding: 5,
+  },
+  filterText: {
+    fontFamily: "nunito-regular",
   },
 });

@@ -42,14 +42,32 @@ export default function Card(prorps) {
                 justifyContent: "space-between",
               }}
             >
-              <Text style={{ fontSize: 10, paddingLeft: 10 }}>
+              <Text
+                style={{
+                  fontSize: 10,
+                  paddingLeft: 10,
+                  fontFamily: "nunito-regular",
+                }}
+              >
                 {prorps.openingTime} - {prorps.closingTime}
               </Text>
-              <Text style={{ fontSize: 10, paddingRight: 10 }}>
+              <Text
+                style={{
+                  fontSize: 10,
+                  paddingRight: 10,
+                  fontFamily: "nunito-regular",
+                }}
+              >
                 {prorps.availableSlots}
               </Text>
             </View>
-            <Text style={{ paddingLeft: 10, fontWeight: "bold", fontSize: 10 }}>
+            <Text
+              style={{
+                paddingLeft: 10,
+                fontFamily: "nunito-bold",
+                fontSize: 10,
+              }}
+            >
               Speciality
             </Text>
             <View
@@ -62,6 +80,7 @@ export default function Card(prorps) {
                 style={{
                   fontSize: 10,
                   paddingLeft: 10,
+                  fontFamily: "nunito-regular",
                 }}
               >
                 {prorps.speciality}
@@ -70,6 +89,7 @@ export default function Card(prorps) {
                 style={{
                   fontSize: 10,
                   paddingRight: 10,
+                  fontFamily: "nunito-regular",
                 }}
               >
                 {prorps.distance}
@@ -92,13 +112,13 @@ const styles = StyleSheet.create({
     justifyContent: "space-between",
   },
   headingText: {
-    fontWeight: "bold",
+    fontFamily: "nunito-bold",
     fontSize: 18,
     paddingTop: 5,
     paddingLeft: 5,
   },
   status: {
-    fontWeight: "bold",
+    fontFamily: "nunito-bold",
     fontSize: 15,
     paddingTop: 10,
     paddingRight: 25,
@@ -106,6 +126,7 @@ const styles = StyleSheet.create({
   address: {
     fontSize: 10,
     paddingLeft: 10,
+    fontFamily: "nunito-regular",
   },
   logo: {
     width: 70,
@@ -117,12 +138,12 @@ const styles = StyleSheet.create({
     paddingTop: 10,
   },
   serving: {
-    fontWeight: "bold",
+    fontFamily: "nunito-bold",
     paddingLeft: 10,
     fontSize: 10,
   },
   availableSlots: {
-    fontWeight: "bold",
+    fontFamily: "nunito-bold",
     paddingRight: 10,
     fontSize: 10,
   },

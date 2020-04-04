@@ -1,5 +1,7 @@
-import React from "react";
+import React, { useState } from "react";
+import * as Font from "expo-font";
 import { StyleSheet, View, Text } from "react-native";
+import { AppLoading } from "expo";
 
 import Navigator from "./src/navigations/Navigation";
 
@@ -16,23 +18,37 @@ import Sort from "./src/views/Sort";
 import Location from "./src/views/Location";
 import Store from "./src/views/Store";
 
-export default function App() {
-  return (
-    <View style={styles.container}>
-      {/* <Text>Its Working</Text> */}
+const getFonts = () =>
+  Font.loadAsync({
+    "nunito-regular": require("./src/assets/fonts/NunitoSans-Regular.ttf"),
+    "nunito-bold": require("./src/assets/fonts/NunitoSans-Bold.ttf"),
+  });
 
-      {/* <Navigator /> */}
-      <ListLayout />
-      {/* <HistoryLayout /> */}
-      {/* <ProfileLayout /> */}
-      {/* <Search /> */}
-      {/* <SearchedResults /> */}
-      {/* <Sort /> */}
-      {/* <Location /> */}
-      {/* <StoreLayout /> */}
-      {/* <ConfirmLayout /> */}
-    </View>
-  );
+export default function App() {
+  const [fontsLoaded, setFontsLoaded] = useState(false);
+
+  if (fontsLoaded) {
+    return (
+      <View style={styles.container}>
+        {/* <Text>Its Working</Text> */}
+
+        <Navigator />
+        {/* <ListLayout /> */}
+        {/* <HistoryLayout /> */}
+        {/* <ProfileLayout /> */}
+        {/* <Search /> */}
+        {/* <SearchedResults /> */}
+        {/* <Sort /> */}
+        {/* <Location /> */}
+        {/* <StoreLayout /> */}
+        {/* <ConfirmLayout /> */}
+      </View>
+    );
+  } else {
+    return (
+      <AppLoading startAsync={getFonts} onFinish={() => setFontsLoaded(true)} />
+    );
+  }
 }
 
 const styles = StyleSheet.create({

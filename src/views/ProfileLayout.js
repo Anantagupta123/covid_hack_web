@@ -26,7 +26,11 @@ export default function Layout() {
         <View style={{ flex: 1 }}>
           <View style={styles.userProfile}>
             <Text
-              style={{ fontSize: 20, fontWeight: "bold", paddingBottom: 5 }}
+              style={{
+                fontSize: 20,
+                fontFamily: "nunito-bold",
+                paddingBottom: 5,
+              }}
             >
               User Profile
             </Text>

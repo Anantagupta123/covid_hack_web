@@ -7,9 +7,11 @@ export default function StoreCard() {
     <View style={styles.confirmation}>
       <Icon name='checkcircle' type='antdesign' color='#6ad380' size={40} />
       <Text style={styles.text}>Appointment Request Sent</Text>
-      <Text style={{ fontSize: 14 }}>to</Text>
+      <Text style={{ fontSize: 14, fontFamily: "nunito-regular" }}>to</Text>
       <Text style={styles.text}>Hospital</Text>
-      <Text style={{ fontSize: 16 }}>02:10 PM, Today</Text>
+      <Text style={{ fontSize: 16, fontFamily: "nunito-regular" }}>
+        02:10 PM, Today
+      </Text>
     </View>
   );
 }
@@ -23,7 +25,7 @@ const styles = StyleSheet.create({
     alignItems: "center",
   },
   text: {
-    fontWeight: "bold",
+    fontFamily: "nunito-bold",
     fontSize: 18,
   },
 });

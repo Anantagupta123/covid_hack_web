@@ -23,13 +23,23 @@ export default function StoreCard() {
           <View style={{ flex: 4 }}>
             <View style={{ flexDirection: "row" }}>
               <Text style={styles.storeName}>Hospital</Text>
-              <Text style={{ flex: 0.5, color: "#6ad380" }}>0.3km</Text>
+              <Text
+                style={{
+                  flex: 0.5,
+                  color: "#6ad380",
+                  fontFamily: "nunito-regular",
+                }}
+              >
+                0.3km
+              </Text>
             </View>
-            <Text style={{ fontSize: 10 }}>ABC, DEF Area</Text>
+            <Text style={{ fontSize: 10, fontFamily: "nunito-regular" }}>
+              ABC, DEF Area
+            </Text>
             <View style={{ flexDirection: "row" }}>
               <View style={{ flex: 3 }}>
                 <View style={{ flex: 1 }}>
-                  <Text style={{ fontSize: 10, fontWeight: "bold" }}>
+                  <Text style={{ fontSize: 10, fontFamily: "nunito-bold" }}>
                     Serving Hours
                   </Text>
                 </View>
@@ -38,7 +48,9 @@ export default function StoreCard() {
                 </View>
               </View>
               <View style={{ flex: 1.5 }}>
-                <Text style={{ color: "#6ad380" }}>Open Now</Text>
+                <Text style={{ color: "#6ad380", fontFamily: "nunito-bold" }}>
+                  Open Now
+                </Text>
               </View>
             </View>
           </View>
@@ -48,7 +60,7 @@ export default function StoreCard() {
           <View style={{ padding: 15 }}>
             <View style={{ flexDirection: "row" }}>
               <View style={{ paddingBottom: 10 }}>
-                <Text style={{ fontSize: 17 }}>Facilities</Text>
+                <Text style={styles.facilities}>Facilities</Text>
               </View>
             </View>
             <View
@@ -64,7 +76,7 @@ export default function StoreCard() {
           <View style={{ padding: 10 }}>
             <View style={{ flexDirection: "row" }}>
               <View style={{ flex: 3, paddingBottom: 20 }}>
-                <Text style={{ fontSize: 15 }}>Surgery</Text>
+                <Text style={styles.facilities}>Surgery</Text>
               </View>
               <TouchableOpacity style={{ flex: 1 }}>
                 <Icon name='plus' type='antdesign' color='#6ad380' />
@@ -83,7 +95,7 @@ export default function StoreCard() {
           <View style={{ padding: 10 }}>
             <View style={{ flexDirection: "row" }}>
               <View style={{ flex: 3, paddingBottom: 20 }}>
-                <Text style={{ fontSize: 15 }}>X-Ray</Text>
+                <Text style={styles.facilities}>X-Ray</Text>
               </View>
               <TouchableOpacity style={{ flex: 1 }}>
                 <Icon name='plus' type='antdesign' color='#6ad380' />
@@ -102,24 +114,21 @@ export default function StoreCard() {
           <View style={{ padding: 10 }}>
             <View style={{ flexDirection: "row" }}>
               <View style={{ flex: 3, paddingBottom: 20 }}>
-                <Text style={{ fontSize: 15 }}>General Medicines</Text>
+                <Text style={styles.facilities}>General Medicines</Text>
               </View>
               <TouchableOpacity style={{ flex: 1 }}>
                 <Icon name='plus' type='antdesign' color='#6ad380' />
               </TouchableOpacity>
             </View>
-            <View
+            {/* <View
               style={{
                 paddingLeft: 10,
                 paddingRight: 10,
                 borderBottomColor: "#dcdcdc",
                 borderBottomWidth: 1,
               }}
-            />
+            /> */}
           </View>
-        </View>
-        <View style={{ padding: 20 }}>
-          <Button title='Book Appointmnet' color='#6ad380' />
         </View>
       </View>
     </View>
@@ -135,8 +144,12 @@ const styles = StyleSheet.create({
     height: 80,
   },
   storeName: {
-    fontWeight: "bold",
+    fontFamily: "nunito-bold",
     fontSize: 18,
     flex: 2,
+  },
+  facilities: {
+    fontSize: 17,
+    fontFamily: "nunito-regular",
   },
 });

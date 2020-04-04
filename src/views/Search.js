@@ -15,8 +15,8 @@ export default function Search() {
         >
           <View style={{ flex: 1, paddingRight: 10 }}>
             <TextInput
-              placeholder='Search hospital, test centers, shleter homes'
-              style={{ borderBottomWidth: 1 }}
+              placeholder='Search Here'
+              style={{ borderBottomWidth: 1, fontFamily: "nunito-regular" }}
             />
           </View>
           <Button title='Search' color='#6ad380' style={{ flex: 1 }} />
