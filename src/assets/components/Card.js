@@ -1,13 +1,21 @@
-import React from "react";
+import React, { useState } from "react";
 import { View, Text, StyleSheet, Image, TouchableOpacity } from "react-native";
 
 export default function Card(prorps) {
+  const status = () => {
+    if (prorps.status === "Open") {
+      return <Text style={{ color: "#6ad380" }}>{prorps.status}</Text>;
+    } else {
+      return <Text style={{ color: "red" }}>{prorps.status}</Text>;
+    }
+  };
+
   return (
     <TouchableOpacity style={{ paddingBottom: 5 }}>
       <View style={styles.card}>
         <View style={styles.heading}>
           <Text style={styles.headingText}>{prorps.name}</Text>
-          <Text style={styles.status}>{prorps.status}</Text>
+          <Text style={styles.status}>{status()}</Text>
         </View>
         <Text style={styles.address}>{prorps.address}</Text>
 
@@ -94,7 +102,6 @@ const styles = StyleSheet.create({
     fontSize: 15,
     paddingTop: 10,
     paddingRight: 25,
-    color: "#6ad380",
   },
   address: {
     fontSize: 10,

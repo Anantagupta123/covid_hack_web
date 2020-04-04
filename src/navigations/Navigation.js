@@ -54,6 +54,9 @@ const screens = {
   },
   Location: {
     screen: Location,
+    navigationOptions: {
+      headerShown: false,
+    },
   },
 };
 

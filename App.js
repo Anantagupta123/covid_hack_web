@@ -21,8 +21,8 @@ export default function App() {
     <View style={styles.container}>
       {/* <Text>Its Working</Text> */}
 
-      <Navigator />
-      {/* <ListLayout /> */}
+      {/* <Navigator /> */}
+      <ListLayout />
       {/* <HistoryLayout /> */}
       {/* <ProfileLayout /> */}
       {/* <Search /> */}

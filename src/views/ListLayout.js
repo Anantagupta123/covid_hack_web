@@ -11,7 +11,7 @@ export default function ListLayout({ navigation }) {
       id: 1,
       name: "New Jersey Hospital",
       address: "123, ABC Area",
-      status: "Open Now",
+      status: "Open",
       availableSlots: "01:40PM, Today",
       distance: "0.3 km",
       openingTime: "07:00AM",

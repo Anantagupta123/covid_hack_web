@@ -77,6 +77,7 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
     fontSize: 20,
     paddingBottom: 40,
+    // fontFamily: "NunitoSans-Regular",
   },
   button: {
     padding: 5,
