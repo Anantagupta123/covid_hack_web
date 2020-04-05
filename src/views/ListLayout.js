@@ -1,11 +1,13 @@
 import React, { useState } from "react";
-import { View, Text, StyleSheet, Button, FlatList } from "react-native";
+import { View, Text, StyleSheet, Button, FlatList, Modal } from "react-native";
 import Header from "../assets/components/Header";
 import FooterMenu from "../assets/components/FooterMenu";
 //Components
 import Card from "../assets/components/Card";
+//Screen
+import Sort from "../views/Sort";
 
-export default function ListLayout({ navigation }) {
+export default function ListLayout({ naviagtion }) {
   const [hospital, setHospital] = useState([
     {
       id: 1,
@@ -31,9 +33,7 @@ export default function ListLayout({ navigation }) {
     },
   ]);
 
-  const pressHandler = () => {
-    navigation.navigate("Sort");
-  };
+  const [modalOpen, setModalOpen] = useState(false);
 
   return (
     <View style={styles.conatiner}>
@@ -64,8 +64,32 @@ export default function ListLayout({ navigation }) {
             <Button
               title='Sort & Filter'
               color='#6ad380'
-              onPress={pressHandler}
+              onPress={() => setModalOpen(true)}
             />
+            <Modal visible={modalOpen} animationType='slide'>
+              <Sort />
+              <View
+                style={{
+                  padding: 60,
+                  flexDirection: "row",
+                }}
+              >
+                <View style={styles.buttons}>
+                  <Button
+                    title='Cancel'
+                    color='#6ad380'
+                    onPress={() => setModalOpen(false)}
+                  />
+                </View>
+                <View style={styles.buttons}>
+                  <Button
+                    title='Save'
+                    color='#6ad380'
+                    onPress={() => setModalOpen(false)}
+                  />
+                </View>
+              </View>
+            </Modal>
           </View>
 
           {/* Hospital Card  */}
@@ -103,5 +127,12 @@ const styles = StyleSheet.create({
   lists: {
     flex: 1,
     padding: 7,
+  },
+  buttons: {
+    width: "50%",
+    paddingHorizontal: 10,
+  },
+  modalOpen: {
+    flex: 1,
   },
 });

@@ -44,14 +44,7 @@ export default function Sort({ navigation }) {
           justifyContent: "space-evenly",
           padding: 5,
         }}
-      >
-        <View style={styles.button}>
-          <Button title='Cancel' color='#6ad380' onPress={pressHandler} />
-        </View>
-        <View style={styles.button}>
-          <Button title='Save' color='#6ad380' onPress={pressHandler} />
-        </View>
-      </View>
+      ></View>
     </View>
   );
 }
@@ -59,14 +52,12 @@ export default function Sort({ navigation }) {
 const styles = StyleSheet.create({
   container: {
     backgroundColor: "#fff",
-    padding: 10,
+    paddingTop: 50,
+    paddingLeft: 30,
   },
   heading: {
     fontSize: 17,
     fontFamily: "nunito-bold",
-  },
-  button: {
-    padding: 5,
   },
   filterText: {
     fontFamily: "nunito-regular",

@@ -60,6 +60,13 @@ const screens = {
   },
 };
 
-const HomeStack = createStackNavigator(screens);
+const HomeStack = createStackNavigator(screens, {
+  defaultNavigationOptions: {
+    headerStyle: {
+      backgroundColor: "#6ad380",
+    },
+    // headerShown: false,
+  },
+});
 
 export default createAppContainer(HomeStack);
