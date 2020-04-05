@@ -18,11 +18,12 @@ import Sort from "./src/views/Sort";
 import Location from "./src/views/Location";
 import Store from "./src/views/Store";
 
-const getFonts = () =>
-  Font.loadAsync({
+async function getFonts() {
+  await Font.loadAsync({
     "nunito-regular": require("./src/assets/fonts/NunitoSans-Regular.ttf"),
     "nunito-bold": require("./src/assets/fonts/NunitoSans-Bold.ttf"),
   });
+}
 
 export default function App() {
   const [fontsLoaded, setFontsLoaded] = useState(false);
